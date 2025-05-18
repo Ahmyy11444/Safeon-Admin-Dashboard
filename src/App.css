@@ -1,31 +1,137 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2,
+.sos-alerts-section h2,
+.community-reports-section h2,
+.users-management-section h2 {
+  margin-top: 0;
+}
+
+.reports-count .number {
+  font-size: 2em;
+  color: #ff4500;
+}
+
+.chart-placeholder,
+.map-placeholder {
+  background-color: #e1e1e1;
+  height: 200px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.severity-legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.severity-legend li {
+  margin: 5px 0;
+}
+
+.severity {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.severe {
+  background-color: red;
+}
+
+.high {
+  background-color: orange;
+}
+
+.medium {
+  background-color: yellow;
+  color: black;
+}
+
+.tabs {
+  margin-bottom: 15px;
+}
+
+.tab-button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background-color: #4285f4;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.report-item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px 0;
 }
 
-.heart {
-  color: #ff0000;
+.users-list table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.small {
-  font-size: 0.75rem;
+.users-list th,
+.users-list td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.download-report button {
+  margin: 15px 0;
+  padding: 10px 15px;
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .sections {
+    grid-template-columns: 1fr 1fr;
+  }
 }
