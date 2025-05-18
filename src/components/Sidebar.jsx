@@ -1,4 +1,5 @@
 import React from "react";
+import { FaChartBar, FaBell, FaComments, FaUserCog } from "react-icons/fa";
 
 const Sidebar = ({ activeSection, setActiveSection }) => {
   return (
@@ -9,25 +10,25 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
           className={`nav-item ${activeSection === "admin" ? "active" : ""}`}
           onClick={() => setActiveSection("admin")}
         >
-          Admin Overview
+          <FaChartBar className="nav-icon" /> Admin Overview
         </li>
         <li
           className={`nav-item ${activeSection === "sos" ? "active" : ""}`}
           onClick={() => setActiveSection("sos")}
         >
-          SOS Alerts
+          <FaBell className="nav-icon" /> SOS Alerts
         </li>
         <li
           className={`nav-item ${activeSection === "community" ? "active" : ""}`}
           onClick={() => setActiveSection("community")}
         >
-          Community Reports
+          <FaComments className="nav-icon" /> Community Reports
         </li>
         <li
           className={`nav-item ${activeSection === "users" ? "active" : ""}`}
           onClick={() => setActiveSection("users")}
         >
-          Users Management
+          <FaUserCog className="nav-icon" /> Users Management
         </li>
       </ul>
     </div>

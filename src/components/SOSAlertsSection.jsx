@@ -38,7 +38,7 @@ const SOSAlertsSection = () => {
       <div className="tab-content">{renderContent()}</div>
       <div className="map-section">
         <MapContainer
-          center={[51.505, -0.09]}
+          center={[30.0444, 31.2357]}
           zoom={13}
           style={{ height: "100%", width: "100%" }}
         >
@@ -46,8 +46,8 @@ const SOSAlertsSection = () => {
             attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
-            <Popup>Alert Location</Popup>
+          <Marker position={[30.0444, 31.2357]}>
+            <Popup>Alert Location in Cairo, Egypt</Popup>
           </Marker>
         </MapContainer>
       </div>
