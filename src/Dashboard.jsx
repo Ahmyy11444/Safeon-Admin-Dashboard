@@ -7,15 +7,16 @@ import UsersManagementSection from "./components/UsersManagementSection";
 
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState("admin");
+  const [activeSubTab, setActiveSubTab] = useState(null);
 
   const renderSection = () => {
     switch (activeSection) {
       case "admin":
         return <AdminSection />;
       case "sos":
-        return <SOSAlertsSection />;
+        return <SOSAlertsSection activeSubTab={activeSubTab} />;
       case "community":
-        return <CommunityReportsSection />;
+        return <CommunityReportsSection activeSubTab={activeSubTab} />;
       case "users":
         return <UsersManagementSection />;
       default:
@@ -25,7 +26,12 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-layout">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Sidebar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        activeSubTab={activeSubTab}
+        setActiveSubTab={setActiveSubTab}
+      />
       <div className="main-content">
         <header>
           <h1>Safe On Admin Dashboard</h1>

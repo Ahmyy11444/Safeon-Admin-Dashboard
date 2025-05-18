@@ -1,3 +1,274 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Dashboard Container */
+.dashboard {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.dashboard h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #c0392b; /* Red accent */
+}
+
+/* Grid Layout for Sections */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Card Layout */
+.card {
+  background: #fff;
+  border: 1px solid #c0392b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(192, 57, 43, 0.2);
+}
+
+/* Admin Section */
+.reports-count .number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* Chart Container */
+.chart-container {
+  margin: 20px 0;
+}
+
+/* Tabs */
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #c0392b;
+}
+
+/* Severity Legend */
+.severity-legend {
+  margin-top: 20px;
+}
+
+.severity-legend ul {
+  list-style: none;
+}
+
+.severity-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.severity {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.severe {
+  background-color: #c0392b;
+}
+
+.high {
+  background-color: #e67e22;
+}
+
+.medium {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+/* Map Section */
+.map-section {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+/* Download Report Button */
+.download-report button {
+  padding: 10px 20px;
+  background-color: #c0392b;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.download-report button:hover {
+  background-color: #a93226;
+}
+
+/* Report Items */
+.report-item {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.report-item p {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.report-item small {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Users Management Table */
+.users-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-list th,
+.users-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Dashboard Layout with Sidebar */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #c0392b; /* Red theme */
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 10px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: #a93226;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.main-content header h1 {
+  color: #c0392b;
+  margin-bottom: 20px;
+}
+
+/* Existing Card Styles (Used in Sections) */
+.card {
+  background: #fff;
+  border: 1px solid #c0392b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(192, 57, 43, 0.2);
+}
+
+/* Tabs (Used in SOS Alerts, Community Reports, etc.) */
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #c0392b;
+}
+
+/* Additional styles for the existing components remain the same... */
 /* Global Reset & Base Styles */
 * {
   margin: 0;
@@ -104,6 +375,122 @@ body {
 }
 
 /* Additional adjustments for map, chart etc. */
+.map-section {
+  height: 300px;
+  margin-bottom: 20px;
+}
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #c0392b;  /* Red theme */
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: #a93226;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Sub-menu header style */
+.sub-menu h3 {
+  margin: 15px 0 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.main-content header h1 {
+  color: #c0392b;
+  margin-bottom: 20px;
+}
+
+/* Card Layout for each view */
+.card {
+  background: #fff;
+  border: 1px solid #c0392b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(192, 57, 43, 0.2);
+}
+
+/* Tabs used in some views */
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #c0392b;
+}
+
+/* Map Section */
 .map-section {
   height: 300px;
   margin-bottom: 20px;

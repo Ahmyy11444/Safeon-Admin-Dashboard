@@ -36,7 +36,7 @@ const SOSAlertsSection = () => {
         ))}
       </div>
       <div className="tab-content">{renderContent()}</div>
-      <div className="map-section">
+      <div className="map-section" style={{ height: "300px", marginBottom: "20px" }}>
         <MapContainer
           center={[30.0444, 31.2357]}
           zoom={13}
