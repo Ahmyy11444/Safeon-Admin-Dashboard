@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-
-const tabs = ['ArETime', 'Pending', 'Approved', 'Rejected'];
+import React, { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const SOSAlertsSection = () => {
-  const [activeTab, setActiveTab] = useState('ArETime');
+  const tabs = ["ArETime", "Pending", "Approved", "Rejected"];
+  const [activeTab, setActiveTab] = useState("ArETime");
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'ArETime':
+      case "ArETime":
         return <div>ArETime Alerts Content</div>;
-      case 'Pending':
+      case "Pending":
         return <div>Pending Alerts Content</div>;
-      case 'Approved':
+      case "Approved":
         return <div>Approved Alerts Content</div>;
-      case 'Rejected':
+      case "Rejected":
         return <div>Rejected Alerts Content</div>;
       default:
         return null;
@@ -27,7 +28,7 @@ const SOSAlertsSection = () => {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+            className={`tab-button ${activeTab === tab ? "active" : ""}`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}
@@ -36,11 +37,24 @@ const SOSAlertsSection = () => {
       </div>
       <div className="tab-content">{renderContent()}</div>
       <div className="map-section">
-        <h4>Alert Map</h4>
-        <div className="map-placeholder">[Map Placeholder with Markers]</div>
+        <MapContainer
+          center={[51.505, -0.09]}
+          zoom={13}
+          style={{ height: "100%", width: "100%" }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[51.505, -0.09]}>
+            <Popup>Alert Location</Popup>
+          </Marker>
+        </MapContainer>
       </div>
       <div className="download-report">
-        <button onClick={() => alert('Downloading Report...')}>Download Report</button>
+        <button onClick={() => alert("Downloading Report...")}>
+          Download Report
+        </button>
       </div>
       <div className="zone-summary">
         <h4>Zone Summary</h4>
